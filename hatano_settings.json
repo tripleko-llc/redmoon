@@ -1,0 +1,24 @@
+{
+    "project": "redmoon",
+    "runtime": "python3.6",
+    "stage": {
+        "dev": {
+            "source": "src",
+            "bucket": "s3",
+            "domain": "redmoon.tripleko.io",
+            "cert": "*.tripleko.io"
+        }
+    },
+    "function": {
+        "root": {
+            "handler": "redmoon.root",
+            "method": "get",
+            "path": "/"
+        },
+        "set": {
+            "handler": "redmoon.set_anchor",
+            "method": "get",
+            "path": "/set"
+        }
+    }
+}
